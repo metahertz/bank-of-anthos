@@ -116,6 +116,9 @@ resource "google_gke_hub_membership" "staging" {
   authority {
     issuer = "https://container.googleapis.com/v1/${module.gke_staging.cluster_id}"
   }
+  labels = {
+    owner = "guy"
+  }
 }
 
 # configure ASM for staging GKE cluster
