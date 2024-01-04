@@ -116,6 +116,9 @@ resource "google_gke_hub_membership" "production" {
   authority {
     issuer = "https://container.googleapis.com/v1/${module.gke_production.cluster_id}"
   }
+  labels = {
+    owner = "guy"
+  }
 }
 
 # configure ASM for production GKE cluster

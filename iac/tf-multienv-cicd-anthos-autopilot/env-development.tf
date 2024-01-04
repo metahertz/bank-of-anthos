@@ -95,6 +95,9 @@ resource "google_gke_hub_membership" "development" {
   authority {
     issuer = "https://container.googleapis.com/v1/${module.gke_development.cluster_id}"
   }
+  labels = {
+    owner = "guy"
+  }
 }
 
 # configure ASM for development GKE cluster
